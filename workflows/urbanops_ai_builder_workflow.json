@@ -1,0 +1,161 @@
+{
+  "name": "UrbanOps AI Builder v1.0",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "build-project",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -384,
+        -16
+      ],
+      "id": "d3836701-5df4-45b8-8c86-728966391780",
+      "name": "Webhook",
+      "webhookId": "f531e4b2-0d3e-4829-81de-270718a46492"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"status\": \"received\",\n  \"message\": \"n8n webhook is connected and ready for the AI agent team\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        448,
+        -16
+      ],
+      "id": "4a98e2f9-d8cb-4238-a8a0-420525792ddf",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "sendTo": "cano1362@gmail.com",
+        "subject": "AI Generated Landing Page",
+        "message": "Project completed successfully.  Project request received from Streamlit.  Attached file: index.html  Sent automatically by n8n.",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {
+                "property": "archive"
+              }
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        256,
+        -16
+      ],
+      "id": "502723ea-6515-472a-8f0d-84547e2ca85b",
+      "name": "Send a message",
+      "webhookId": "bf660d9b-1d2a-4c65-83d6-6c58f9242897",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "NZSmKC9TYYjMCd7s",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fileSelector": "C:\\Users\\cano1\\.n8n-files\\project.zip",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        -176,
+        -16
+      ],
+      "id": "6069b04c-1f36-43bf-b404-cf75a70f8a34",
+      "name": "Read/Write Files from Disk"
+    },
+    {
+      "parameters": {
+        "operation": "compress",
+        "fileName": "project.zip",
+        "binaryPropertyOutput": "archive"
+      },
+      "type": "n8n-nodes-base.compression",
+      "typeVersion": 1.1,
+      "position": [
+        48,
+        -16
+      ],
+      "id": "c41ce5de-97db-4ea6-b5fa-bb5a4d13869f",
+      "name": "Compression"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Respond to Webhook": {
+      "main": [
+        []
+      ]
+    },
+    "Read/Write Files from Disk": {
+      "main": [
+        [
+          {
+            "node": "Compression",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compression": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "ade10079-5832-4783-9510-27f8193f4e9a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "4a9342cd58c0afcc23f602acea8d103c34b135e71d39fc239ed6fce663c93ed0"
+  },
+  "id": "xTqdMwtnh6bQCjtA",
+  "tags": []
+}
