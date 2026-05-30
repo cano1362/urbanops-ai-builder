@@ -1,3 +1,10 @@
+![Python](https://img.shields.io/badge/Python-3.14-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![n8n](https://img.shields.io/badge/n8n-Automation-orange)
+![GitHub](https://img.shields.io/badge/GitHub-Version%20Control-black)
+![Status](https://img.shields.io/badge/Status-Active%20Development-green)
+
+
 # UrbanOps AI Builder
 
 AI-powered automation platform that generates, packages, and delivers web projects automatically using Streamlit, n8n, Python, and Gmail integrations.
