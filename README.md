@@ -5,7 +5,7 @@
 ![Status](https://img.shields.io/badge/Status-Active%20Development-green)
 
 <p align="center">
-  <img src="screenshots/urbanops-banner.png" width="900">
+  <img src="./screenshots/urbanops-banner.png" width="900">
 </p>
 
 # UrbanOps AI Builder
