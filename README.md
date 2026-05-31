@@ -154,3 +154,24 @@ Founder of UrbanOps
 # Status
 
 Active Development
+
+
+## Screenshots
+
+### Streamlit Dashboard
+![Streamlit Dashboard](screenshots/streamlit-dashboard.png)
+
+---
+
+### MCP Agent System
+![MCP Agent System](screenshots/mcp-agent-system.png)
+
+---
+
+### n8n Workflow
+![n8n Workflow](screenshots/n8n-workflow.png)
+
+---
+
+### Terminal Execution
+![Terminal Execution](screenshots/terminal-execution.png)
