@@ -4,6 +4,12 @@
 ![GitHub](https://img.shields.io/badge/GitHub-Version%20Control-black)
 ![Status](https://img.shields.io/badge/Status-Active%20Development-green)
 
+<p align="center">
+  <img src="screenshots/urbanops-banner.png" width="900">
+</p>
+
+# UrbanOps AI Builder
+
 
 # UrbanOps AI Builder
 
