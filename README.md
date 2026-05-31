@@ -1,46 +1,42 @@
+# UrbanOps AI Builder
+
 ![Python](https://img.shields.io/badge/Python-3.14-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
 ![n8n](https://img.shields.io/badge/n8n-Automation-orange)
 ![GitHub](https://img.shields.io/badge/GitHub-Version%20Control-black)
 ![Status](https://img.shields.io/badge/Status-Active%20Development-green)
 
-<p align="center">
-  <img src="./screenshots/urbanops-banner.png" width="900">
-</p>
+![UrbanOps Banner](https://raw.githubusercontent.com/cano1362/urbanops-ai-builder/main/screenshots/urbanops-banner.png)
 
-# UrbanOps AI Builder
-
-
-# UrbanOps AI Builder
-
-AI-powered automation platform that generates, packages, and delivers web projects automatically using Streamlit, n8n, Python, and Gmail integrations.
+AI-powered automation platform that generates, packages, and delivers web projects automatically using Streamlit, n8n, Python, MCP filesystem tools, OpenAI agents, and Gmail integrations.
 
 ---
 
-# Overview
+## Overview
 
 UrbanOps AI Builder is an experimental AI automation system designed to:
 
-- Generate landing page projects
-- Package project files automatically
-- Compress builds into ZIP archives
-- Send completed projects through Gmail
-- Integrate Streamlit frontends with n8n workflows
-- Create scalable AI-powered development pipelines
+* Generate landing page projects
+* Package project files automatically
+* Compress builds into ZIP archives
+* Send completed projects through Gmail
+* Integrate Streamlit frontends with n8n workflows
+* Create scalable AI-powered development pipelines
 
 The system combines:
-- Python
-- Streamlit
-- n8n
-- GitHub
-- Gmail automation
-- AI orchestration workflows
+
+* Python
+* Streamlit
+* n8n
+* GitHub
+* Gmail automation
+* AI orchestration workflows
 
 ---
 
-# Features
+## Features
 
-## Automated Workflow
+### Automated Workflow
 
 The current workflow pipeline:
 
@@ -54,80 +50,86 @@ The current workflow pipeline:
 
 ---
 
-# Current n8n Workflow
+## Current n8n Workflow
 
-Webhook  
-→ Read/Write Files from Disk  
-→ Compression  
-→ Gmail Send Message  
+```text
+Webhook
+→ Read/Write Files from Disk
+→ Compression
+→ Gmail Send Message
 → Respond to Webhook
+```
 
 ---
 
-# Technologies Used
+## Technologies Used
 
-- Python
-- Streamlit
-- n8n
-- Git
-- GitHub
-- Gmail API
-- PowerShell
-- HTML/CSS/JavaScript
+* Python
+* Streamlit
+* n8n
+* Git
+* GitHub
+* Gmail API
+* PowerShell
+* HTML/CSS/JavaScript
 
 ---
 
-# Security
+## Security
 
 Sensitive files are protected using `.gitignore`.
 
 Excluded items include:
 
-- `.env`
-- `.venv`
-- generated ZIP files
-- temporary project outputs
-- n8n local storage
+* `.env`
+* `.venv`
+* Generated ZIP files
+* Temporary project outputs
+* n8n local storage
 
 ---
 
-# Installation
+## Installation
 
-## Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/cano1362/urbanops-ai-builder.git
 ```
 
-## Enter Project Folder
+### Enter Project Folder
 
 ```bash
 cd urbanops-ai-builder
 ```
 
-## Create Virtual Environment
+### Create Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-## Activate Environment
+### Activate Environment
 
-### Windows
+#### Windows
 
 ```powershell
 .venv\Scripts\activate
 ```
 
-### Linux / Mac
+#### Linux / Mac
 
 ```bash
 source .venv/bin/activate
 ```
 
----
+### Install Requirements
 
-# Run Streamlit
+```bash
+pip install -r requirements.txt
+```
+
+### Run Streamlit
 
 ```bash
 streamlit run app.py
@@ -135,49 +137,48 @@ streamlit run app.py
 
 ---
 
-# Future Roadmap
+## Future Roadmap
 
-- AI multi-agent orchestration
-- Automated deployment system
-- SaaS dashboard
-- User authentication
-- Stripe integration
-- Docker support
-- Cloud deployment
-- Project templates marketplace
-- AI code generation agents
-- Enterprise workflow automation
+* AI multi-agent orchestration
+* Automated deployment system
+* SaaS dashboard
+* User authentication
+* Stripe integration
+* Docker support
+* Cloud deployment
+* Project templates marketplace
+* AI code generation agents
+* Enterprise workflow automation
 
 ---
 
-# Author
+## Author
 
-Leonardo Vega  
+Leonardo Vega
 Founder of UrbanOps
 
 ---
 
-# Status
+## Status
 
 Active Development
 
+---
 
 ## Screenshots
 
 ### Streamlit Dashboard
+
 ![Streamlit Dashboard](screenshots/streamlit-dashboard.png)
 
----
-
 ### MCP Agent System
+
 ![MCP Agent System](screenshots/mcp-agent-system.png)
 
----
-
 ### n8n Workflow
+
 ![n8n Workflow](screenshots/n8n-workflow.png)
 
----
-
 ### Terminal Execution
+
 ![Terminal Execution](screenshots/terminal-execution.png)
