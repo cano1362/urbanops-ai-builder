@@ -6,7 +6,7 @@
 ![GitHub](https://img.shields.io/badge/GitHub-Version%20Control-black)
 ![Status](https://img.shields.io/badge/Status-Active%20Development-green)
 
-![UrbanOps Banner](https://raw.githubusercontent.com/cano1362/urbanops-ai-builder/main/screenshots/urbanops-banner.png)
+![UrbanOps Banner](screenshots/UrbanOps-banner.png)
 
 AI-powered automation platform that generates, packages, and delivers web projects automatically using Streamlit, n8n, Python, MCP filesystem tools, OpenAI agents, and Gmail integrations.
 
